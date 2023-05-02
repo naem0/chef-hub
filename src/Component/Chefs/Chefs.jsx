@@ -9,7 +9,6 @@ const Chefs = () => {
             {
                 datas.map(data=> <Chef key={data.id} data={data} ></Chef>)
             }
-            <h4>hello {datas.length}</h4>
         </div>
     );
 };
