@@ -1,0 +1,393 @@
+[
+    {
+        "photo": "https://example.com/chef1.jpg",
+        "name": "Chef John Doe",
+        "experience": "Over 10 years of experience in French cuisine",
+        "bio": "Chef John Doe is a highly experienced chef who has worked in several top-rated restaurants across France. He specializes in French cuisine and has a passion for creating unique and delicious dishes.",
+        "likes": 5000,
+        "recipes": [
+            {
+                "name": "Classic French Onion Soup",
+                "ingredients": [
+                    "6 large onions",
+                    "3 cloves of garlic",
+                    "1/4 cup butter",
+                    "4 cups beef broth",
+                    "1 cup red wine",
+                    "1 tablespoon sugar",
+                    "Salt and pepper to taste"
+                ],
+                "cooking_method": "Slice onions and garlic, and cook in a large pot with melted butter until caramelized. Add beef broth, red wine, sugar, salt, and pepper. Simmer for 30 minutes. Serve with croutons and grated cheese.",
+                "rating": 4.5
+            },
+            {
+                "name": "Beef Bourguignon",
+                "ingredients": [
+                    "2 pounds beef chuck",
+                    "1 onion",
+                    "3 cloves of garlic",
+                    "3 carrots",
+                    "3 stalks of celery",
+                    "2 cups red wine",
+                    "2 cups beef broth"
+                ],
+                "cooking_method": "Brown beef in a large pot. Add chopped onion, garlic, carrots, and celery. Cook until softened. Add red wine and beef broth. Simmer for 2-3 hours. Serve with mashed potatoes.",
+                "rating": 4.8
+            },
+            {
+                "name": "Coq au Vin",
+                "ingredients": [
+                    "1 whole chicken",
+                    "6 slices of bacon",
+                    "1 onion",
+                    "3 cloves of garlic",
+                    "2 cups red wine",
+                    "2 cups chicken broth",
+                    "1/4 cup flour"
+                ],
+                "cooking_method": "Cook bacon in a large pot until crispy. Remove and set aside. Brown chicken in bacon fat. Remove and set aside. Cook chopped onion and garlic in remaining fat until softened. Add flour and stir to make a roux. Add red wine and chicken broth. Add chicken and bacon. Simmer for 1-2 hours. Serve with crusty bread.",
+                "rating": 4.6
+            },
+            {
+                "name": "Croque Monsieur",
+                "ingredients": [
+                    "4 slices of bread",
+                    "4 slices of ham",
+                    "4 slices of Gruyere cheese",
+                    "1/4 cup butter",
+                    "1/4 cup flour",
+                    "2 cups milk"
+                ],
+                "cooking_method": "Make a béchamel sauce by cooking flour and butter until bubbly. Add milk and whisk until thickened. Place ham and cheese on bread slices. Top with another slice of bread. Dip sandwiches in béchamel sauce. Cook in a buttered pan until golden brown. Serve hot.",
+                "rating": 4.3
+            },
+            {
+                "name": "Ratatouille",
+                "ingredients": [
+                    "1 eggplant",
+                    "1 zucchini",
+                    "1 yellow squash",
+                    "1 red bell pepper",
+                    "1 onion",
+                    "3 cloves of garlic",
+                    "1 can of diced tomatoes",
+                    "1 tablespoon olive oil",
+                    "Salt and pepper to taste"
+                ],
+                "cooking_method": "Slice vegetables into thin rounds. Cook onionand garlic in olive oil until softened. Add bell pepper and cook for a few minutes. Add eggplant, zucchini, and yellow squash. Cook until tender. Add canned tomatoes and simmer for 15-20 minutes. Season with salt and pepper. Serve hot or cold.",
+                "rating": 4.2
+            },
+            {
+                "name": "Creme Brulee",
+                "ingredients": [
+                    "6 egg yolks",
+                    "1/2 cup sugar",
+                    "2 cups heavy cream",
+                    "1 teaspoon vanilla extract",
+                    "1/4 cup sugar (for topping)"
+                ],
+                "cooking_method": "Whisk egg yolks and sugar until light and frothy. Heat heavy cream and vanilla extract in a saucepan until almost boiling. Add hot cream to egg mixture while whisking constantly. Pour mixture into ramekins. Bake in a water bath for 30-40 minutes. Chill in the fridge for at least 2 hours. Sprinkle sugar on top and caramelize with a blowtorch or under the broiler.",
+                "rating": 4.7
+            }
+        ]
+    },
+    {
+        "photo": "https://example.com/chef2.jpg",
+        "name": "Chef Jane Smith",
+        "experience": "Over 15 years of experience in Italian cuisine",
+        "bio": "Chef Jane Smith is an expert in Italian cuisine and has worked in some of the best Italian restaurants in the world. She is known for her creative and flavorful dishes that highlight the best ingredients from Italy.",
+        "likes": 7000,
+        "recipes": [
+            {
+                "name": "Spaghetti Carbonara",
+                "ingredients": [
+                    "1 pound spaghetti",
+                    "1/2 pound pancetta",
+                    "4 egg yolks",
+                    "1 cup grated Pecorino Romano cheese",
+                    "1/2 teaspoon black pepper"
+                ],
+                "cooking_method": "Cook spaghetti in salted water until al dente. Cook pancetta until crispy. Whisk egg yolks, grated cheese, and black pepper. Reserve 1 cup of pasta water. Drain spaghetti and add to pancetta. Add egg mixture and pasta water. Toss to combine. Serve hot.",
+                "rating": 4.9
+            },
+            {
+                "name": "Margherita Pizza",
+                "ingredients": [
+                    "1 pound pizza dough",
+                    "1/2 cup tomato sauce",
+                    "8 ounces fresh mozzarella cheese",
+                    "1/4 cup fresh basil leaves"
+                ],
+                "cooking_method": "Preheat oven to 500°F. Stretch pizza dough and place on a baking sheet. Spread tomato sauce over dough. Slice mozzarella and place on top. Bake for 8-10 minutes until crust is crispy and cheese is melted. Garnish with fresh basil leaves.",
+                "rating": 4.7
+            },
+            {
+                "name": "Chicken Parmesan",
+                "ingredients": [
+                    "4 boneless chicken breasts",
+                    "1 cup breadcrumbs",
+                    "1/2 cup grated Parmesan cheese",
+                    "2 eggs",
+                    "1 cup tomato sauce",
+                    "8 ounces fresh mozzarella cheese"
+                ],
+                "cooking_method": "Preheat oven to 375°F. Mix breadcrumbs and grated cheese. Beat eggs in a separate bowl. Dip chicken breasts in egg and then in breadcrumb mixture. Place chicken in a baking dish. Spoon tomato sauce over chicken. Top with sliced mozzarella. Bake for 25-30 minutes until chicken is cooked through and cheese is melted and bubbly.",
+                "rating": 4.5
+            },
+            {
+                "name": "Pesto Pasta",
+                "ingredients": [
+                    "1 pound pasta",
+                    "2 cups fresh basil leaves",
+                    "1/2 cup grated Parmesan cheese",
+                    "1/2 cup olive oil",
+                    "1/2 cup pine nuts",
+                    "2 garlic cloves"
+                ],
+                "cooking_method": "Cook pasta in salted water until al dente. In a food processor, pulse basil, Parmesan cheese, pine nuts, and garlic until finely chopped. Slowly add olive oil while pulsing. Drain pasta and reserve 1 cup of pasta water. Add pesto sauce to pasta and toss to combine. If the sauce is too thick, add some pasta water to thin it out. Serve hot or cold.",
+                "rating": 4.3
+            }
+        ]
+    },
+    {
+        "photo": "https://example.com/chef3.jpg",
+        "name": "Chef David Lee",
+        "experience": "Over 20 years of experience in Chinese cuisine",
+        "bio": "Chef David Lee is a master of Chinese cuisine and has won numerous awards for his innovative and delicious dishes. He combines traditional Chinese cooking techniques with modern ingredients to create unique and unforgettable flavors.",
+        "likes": 10000,
+        "recipes": [
+            {
+                "name": "Kung Pao Chicken",
+                "ingredients": [
+                    "4 boneless chicken breasts",
+                    "1/2 cup cornstarch",
+                    "1/4 cup soy sauce",
+                    "1/4 cup rice vinegar",
+                    "2 tablespoons honey",
+                    "1 tablespoon sesame oil",
+                    "1/2 teaspoon red pepper flakes",
+                    "2 green onions",
+                    "1 red bell pepper",
+                    "1/2 cup roasted peanuts"
+                ],
+                "cooking_method": "Cut chicken into bite-sized pieces. Coat chicken in cornstarch. In a bowl, whisk soy sauce, rice vinegar, honey, sesame oil, and red pepper flakes. Chop green onions and bell pepper. Heat oil in a wok or large skillet over high heat. Add chicken and cook until golden brown. Add green onions and bell pepper. Cook for a few minutes. Add sauce and peanuts. Cook for another minute. Serve hot with rice.",
+                "rating": 4.6
+            },
+            {
+                "name": "Steamed Dumplings",
+                "ingredients": [
+                    "1 pound ground pork",
+                    "1/2 cup chopped cabbage",
+                    "2 green onions",
+                    "2 garlic cloves",
+                    "1 tablespoon soy sauce",
+                    "1 tablespoon sesame oil",
+                    "1 tablespoon cornstarch",
+                    "1 package dumpling wrappers"
+                ],
+                "cooking_method": "In a bowl, mix ground pork, chopped cabbage, green onions, garlic, soy sauce, sesame oil, and cornstarch. Spoon mixture onto dumpling wrappers. Fold and seal the edges. Place dumplings in a steamer basket. Steam for 10-12 minutes. Serve hot with soy sauce and vinegar for dipping.",
+                "rating": 4.8
+            },
+            {
+                "name": "Beef and Broccoli Stir-Fry",
+                "ingredients": [
+                    "1 pound flank steak",
+                    "1/4 cup soy sauce",
+                    "2 tablespoons brown sugar",
+                    "2 tablespoons cornstarch",
+                    "1 tablespoon sesame oil",
+                    "1 tablespoon grated ginger",
+                    "2 garlic cloves",
+                    "1/2 teaspoon red pepper flakes",
+                    "1 head broccoli",
+                    "1 red bell pepper",
+                    "2 green onions"
+                ],
+                "cooking_method": "Slice flank steak against the grain into thin strips. In a bowl, whisk soy sauce, brown sugar, cornstarch, sesame oil, gratedginger, garlic, and red pepper flakes. Cut broccoli into florets, slice red bell pepper, and chop green onions. Heat oil in a wok or large skillet over high heat. Add beef and cook until browned. Add broccoli, red bell pepper, and green onions. Cook for a few minutes until vegetables are tender. Add sauce and cook for another minute. Serve hot with rice.",
+                "rating": 4.4
+            }
+        ]
+    },
+    {
+        "photo": "https://example.com/chef4.jpg",
+        "name": "Chef Maria Sanchez",
+        "experience": "10 years of experience in Mexican cuisine",
+        "bio": "Chef Maria Sanchez is a passionate and talented chef who specializes in authentic Mexican cuisine. She has trained in some of the best kitchens in Mexico and is known for her creative and flavorful dishes.",
+        "likes": 8000,
+        "recipes": [
+            {
+                "name": "Tacos al Pastor",
+                "ingredients": [
+                    "1 pound pork shoulder",
+                    "2 tablespoons achiote paste",
+                    "1 tablespoon white vinegar",
+                    "1 tablespoon vegetable oil",
+                    "1 pineapple",
+                    "1 white onion",
+                    "1/2 cup chopped cilantro",
+                    "10-12 corn tortillas"
+                ],
+                "cooking_method": "Cut pork shoulder into small pieces. In a bowl, mix achiote paste, white vinegar, and vegetable oil. Add pork to the bowl and mix well to coat. Cut pineapple into small pieces and slice white onion. Heat a large skillet over medium-high heat. Add pork and cook until browned. Add pineapple and white onion. Cook until vegetables are tender. Heat tortillas in a separate skillet. Serve pork mixture on tortillas and top with cilantro.",
+                "rating": 4.7
+            },
+            {
+                "name": "Chicken Enchiladas",
+                "ingredients": [
+                    "2 boneless chicken breasts",
+                    "1 tablespoon chili powder",
+                    "1/2 teaspoon ground cumin",
+                    "1/4 teaspoon garlic powder",
+                    "1/4 teaspoon onion powder",
+                    "1/4 teaspoon dried oregano",
+                    "1/4 teaspoon paprika",
+                    "1/4 teaspoon salt",
+                    "1 can enchilada sauce",
+                    "1 cup shredded cheddar cheese",
+                    "1/4 cup chopped green onions",
+                    "8-10 corn tortillas"
+                ],
+                "cooking_method": "Preheat oven to 375°F. Season chicken with chili powder, cumin, garlic powder, onion powder, oregano, paprika, and salt. Cook chicken in a skillet until browned. Shred chicken and mix with 1/2 can of enchilada sauce, shredded cheese, and green onions. Heat tortillas in the microwave or in a skillet. Fill each tortilla with chicken mixture and roll tightly. Place enchiladas in a baking dish. Pour remaining enchilada sauce over the top. Bake for 20 minutes. Serve hot.",
+                "rating": 4.5
+            },
+            {
+                "name": "Guacamole",
+                "ingredients": [
+                    "3 ripe avocados",
+                    "1/2 onion",
+                    "2 garlic cloves",
+                    "1 jalapeño pepper",
+                    "1/4 cup chopped cilantro",
+                    "1 lime",
+                    "Salt to taste"
+                ],
+                "cooking_method": "Cut avocados in half and remove the pit. Scoop out the flesh into a bowl. Chop onion, garlic, jalapeño pepper, and cilantro. Add to the bowl. Squeeze the juice of one lime over the mixture.Add salt to taste. Mash the mixture with a fork until it is smooth but still slightly chunky. Serve with tortilla chips.",
+                "rating": 4.9
+            },
+            {
+                "name": "Chiles Rellenos",
+                "ingredients": [
+                    "4 poblano peppers",
+                    "1/2 pound ground beef",
+                    "1/2 onion",
+                    "2 garlic cloves",
+                    "1/4 teaspoon cumin",
+                    "1/4 teaspoon dried oregano",
+                    "1/4 teaspoon salt",
+                    "1/4 teaspoon black pepper",
+                    "1 cup shredded Monterey Jack cheese",
+                    "1 cup tomato sauce",
+                    "1/4 cup chopped cilantro"
+                ],
+                "cooking_method": "Roast poblano peppers under the broiler until the skins are blackened. Let the peppers cool, then peel off the skins. Cut a slit lengthwise in each pepper and remove the seeds. In a skillet, cook ground beef with chopped onion and garlic until browned. Add cumin, oregano, salt, and black pepper. Stuff each pepper with the beef mixture and shredded cheese. Place peppers in a baking dish and pour tomato sauce over the top. Bake for 20-25 minutes. Serve hot with cilantro.",
+                "rating": 4.6
+            },
+            {
+                "name": "Salsa Verde",
+                "ingredients": [
+                    "1 pound tomatillos",
+                    "1/2 onion",
+                    "2 garlic cloves",
+                    "1 jalapeño pepper",
+                    "1/4 cup chopped cilantro",
+                    "1 lime",
+                    "Salt to taste"
+                ],
+                "cooking_method": "Remove the husks from tomatillos and rinse under cold water. Cut tomatillos in half and place them on a baking sheet. Broil tomatillos until they are lightly browned. In a blender, combine broiled tomatillos, chopped onion, garlic, jalapeño pepper, cilantro, and juice of one lime. Blend until smooth. Add salt to taste. Serve with tortilla chips.",
+                "rating": 4.8
+            },
+            {
+                "name": "Tamales",
+                "ingredients": [
+                    "2 cups masa harina",
+                    "1/2 cup vegetable shortening",
+                    "1/2 teaspoon baking powder",
+                    "1/2 teaspoon salt",
+                    "1 1/2 cups chicken broth",
+                    "1/2 pound pork shoulder",
+                    "1/2 onion",
+                    "2 garlic cloves",
+                    "1 teaspoon cumin",
+                    "1 teaspoon chili powder",
+                    "1/2 teaspoon dried oregano",
+                    "1/2 teaspoon salt",
+                    "1 can enchilada sauce"
+                ],
+                "cooking_method": "Soak corn husks in warm water for at least an hour. In a large bowl, mix masa harina, vegetable shortening, baking powder, and salt. Gradually add chicken broth until the mixture is smooth and slightly sticky. Cut pork shoulder into small pieces. Cook pork in a skillet with chopped onion and garlic until browned. Add cumin, chili powder, oregano, and salt. Add enchilada sauce and simmer for a few minutes. Spread a thin layer of masa mixture onto each corn husk. Spoon pork mixture onto the masa. Roll the husk around the filling and fold the ends under. Place tamales in a steamer basket and steam for 1 hour. Serve hot with additional enchilada sauce.",
+                "rating": 4.7
+            },
+            {
+                "name": "Churros",
+                "ingredients": [
+                    "1 cupall-purpose flour",
+                    "1/2 cup unsalted butter",
+                    "1 cup water",
+                    "1/4 teaspoon salt",
+                    "3 eggs",
+                    "1/2 cup sugar",
+                    "1 teaspoon ground cinnamon"
+                ],
+                "cooking_method": "In a saucepan, combine water, butter, and salt. Heat until butter is melted and mixture comes to a boil. Add flour and stir until a smooth dough forms. Remove from heat and let cool slightly. Add eggs one at a time, beating well after each addition. Heat vegetable oil in a large skillet over medium-high heat. Pipe dough into the hot oil using a star-shaped pastry tip. Fry until golden brown. Combine sugar and cinnamon in a shallow bowl. Roll churros in cinnamon sugar. Serve hot.",
+                "rating": 4.5
+            },
+            {
+                "name": "Sopaipillas",
+                "ingredients": [
+                    "2 cups all-purpose flour",
+                    "2 teaspoons baking powder",
+                    "1/2 teaspoon salt",
+                    "1 tablespoon sugar",
+                    "2 tablespoons vegetable shortening",
+                    "2/3 cup warm water",
+                    "Vegetable oil for frying",
+                    "Honey for drizzling"
+                ],
+                "cooking_method": "In a large bowl, mix flour, baking powder, salt, and sugar. Cut in shortening until mixture is crumbly. Gradually add warm water until a soft dough forms. Knead dough for a few minutes. Cover dough and let rest for 20 minutes. Heat vegetable oil in a large skillet over medium-high heat. Roll out dough on a floured surface to about 1/4 inch thickness. Cut dough into small squares or circles. Fry dough in hot oil until golden brown. Drain on paper towels. Drizzle with honey before serving.",
+                "rating": 4.4
+            },
+            {
+                "name": "Arroz con Leche",
+                "ingredients": [
+                    "1 cup white rice",
+                    "2 cups water",
+                    "1 cinnamon stick",
+                    "1 can evaporated milk",
+                    "1 can sweetened condensed milk",
+                    "1/2 cup raisins"
+                ],
+                "cooking_method": "In a saucepan, combine rice, water, and cinnamon stick. Bring to a boil, then reduce heat and simmer until rice is tender and water is absorbed. Remove cinnamon stick. Add evaporated milk, sweetened condensed milk, and raisins. Cook over medium heat, stirring constantly, until mixture thickens. Serve hot or cold.",
+                "rating": 4.6
+            },
+            {
+                "name": "Flan",
+                "ingredients": [
+                    "1 cup sugar",
+                    "4 eggs",
+                    "1 can sweetened condensed milk",
+                    "2 cups milk",
+                    "1 teaspoon vanilla extract"
+                ],
+                "cooking_method": "Preheat oven to 350 degrees F. In a saucepan, melt sugar over medium-high heat until it is golden brown. Pour melted sugar into a 9-inch round baking dish, swirling to coat the bottom of the dish. In a bowl, whisk together eggs, sweetened condensed milk, milk, and vanilla extract. Pour mixture into the baking dish. Place the baking dish into a larger baking dish and fill the larger dish with hot water until it reaches halfway up the sides of the smaller dish. Bake for 45-50 minutes, or until a knife inserted into the center of the flan comes out clean. Chill flan in the refrigerator for at least 1 hour before serving.",
+                "rating": 4.8
+            },
+            {
+                "name": "Tres Leches Cake",
+                "ingredients": [
+                    "1 1/2 cups all-purpose flour",
+                    "1 teaspoon baking powder",
+                    "1/2 cup unsalted butter",
+                    "1 cup white sugar",
+                    "5 eggs",
+                    "1/2 teaspoon vanilla extract",
+                    "2 cups whole milk",
+                    "1 can sweetened condensed milk",
+                    "1 can evaporated milk",
+                    "1 1/2 cups heavy whipping cream",
+                    "1/4 cup white sugar",
+                    "1 teaspoon vanilla extract"
+                ],
+                "cooking_method": "Preheat oven to 350 degrees F. Grease and flour a 9x13 inch baking pan. In a medium bowl, sift together flour and baking powder. In a large bowl, cream butter and 1 cup sugar until light and fluffy. Add eggs one at a time, beating well after each addition. Stir in vanilla. Add the flour mixture to the butter mixture 2 tablespoons at a time, mixing until well blended. Pour batter into prepared pan. Bake for 30 minutes. Pierce cake all over with a fork. In a medium bowl, whisk together whole milk, sweetened condensed milk, and evaporated milk. Pour mixture over the cake. Let cake cool completely. In a large bowl, whip heavy cream, 1/4 cup sugar, and 1 teaspoon vanilla until thick. Spread whipped cream over cake. Refrigerate until ready to serve.",
+                "rating": 4.7
+            }
+        ]
+    }
+]
