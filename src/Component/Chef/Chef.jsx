@@ -2,7 +2,7 @@ import React from 'react';
 
 const Chef = () => {
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
                 <img src="https://media.istockphoto.com/id/1079893444/photo/grilled-steaks-and-vegetables-on-white-background.jpg?s=612x612&w=0&k=20&c=h1AeikJAhGY0KK7rinCdX_8YzYE8vRzXFwJJAJPw_uQ=" alt="Shoes" className="rounded-xl w-2/3" />
             </figure>
