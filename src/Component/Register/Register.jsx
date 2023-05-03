@@ -3,7 +3,7 @@ import { AuthContext } from '../../Authprovider';
 
 
 const Register = () => {
-    const {createUser, updatUser, googleSignIn}= useContext(AuthContext);
+    const {createUser, updatUser, googleSignIn, githabsignIn}= useContext(AuthContext);
     const [error, setError] = useState('');
     
     const hendalRegister= event =>{
@@ -78,6 +78,7 @@ const Register = () => {
                         </div>
                     </form>
                     <button onClick={googleSignIn}>google</button>
+                    <button onClick={githabsignIn}>githab</button>
                 </div>
             </div>
         </div>
