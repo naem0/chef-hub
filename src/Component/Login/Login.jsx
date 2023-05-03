@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Authprovider';
 
 const Login = () => {
     const {signIn}= useContext(AuthContext);
+    const [error, setError] = useState('');
     
     const hendalLoging= event =>{
         event.preventDefault();
@@ -16,6 +17,7 @@ const Login = () => {
         })
         .catch(error => {
             console.log(error);
+            setError(error.message)
         })
     }
     return (
@@ -42,6 +44,7 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
+                            <p><small className='text-red-400'>{error}</small></p>
                             <div className="form-control mt-6">
                                 <button className="btn">Login</button>
                             </div>

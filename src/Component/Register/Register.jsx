@@ -3,7 +3,7 @@ import { AuthContext } from '../../Authprovider';
 
 
 const Register = () => {
-    const {createUser}= useContext(AuthContext);
+    const {createUser, updatUser}= useContext(AuthContext);
     const [error, setError] = useState('');
     
     const hendalRegister= event =>{
@@ -22,6 +22,15 @@ const Register = () => {
         .then(result => {
             const createdUser = result.user;
             console.log(createdUser);
+        })
+        .catch(error => {
+            console.log(error);
+            setError(error.message)
+        });
+        updatUser(name, photo)
+        .then(result => {
+            const updateProfile = result.user;
+            console.log(updateProfile);
         })
         .catch(error => {
             console.log(error);
@@ -63,7 +72,7 @@ const Register = () => {
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
-                        <p>{error}</p>
+                        <p><small className='text-red-400'>{error}</small></p>
                         <div className="form-control mt-6">
                             <button className="btn">Register</button>
                         </div>
