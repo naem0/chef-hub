@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Authprovider';
 
 
 const Register = () => {
     const {createUser}= useContext(AuthContext);
+    const [error, setError] = useState('');
     
     const hendalRegister= event =>{
         event.preventDefault();
@@ -12,6 +13,11 @@ const Register = () => {
         const photo = form.photo.value
         const email = form.email.value
         const password = form.password.value
+        setError('')
+        if (password.length < 6) {
+            setError('password atlist  6 cractir');
+            return
+        }
         createUser(email,password)
         .then(result => {
             const createdUser = result.user;
@@ -19,7 +25,8 @@ const Register = () => {
         })
         .catch(error => {
             console.log(error);
-        })
+            setError(error.message)
+        });
     }
     return (
         <div className="hero min-h-screen ">
@@ -56,6 +63,7 @@ const Register = () => {
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
+                        <p>{error}</p>
                         <div className="form-control mt-6">
                             <button className="btn">Register</button>
                         </div>

@@ -4,7 +4,7 @@ import Recipe from '../Recipe/Recipe';
 
 const Recipes = () => {
     const chefData = useLoaderData()
-    const { name, bio, id, photo, likes, experience, recipes} = chefData; 
+    const { name, bio, id , photo, likes, experience, recipes} = chefData; 
     return (
         <div className=''>
             <div className="card card-side bg-base-100 shadow-xl mt-10 grid grid-cols-3 gap-12">
@@ -25,8 +25,12 @@ const Recipes = () => {
                     </div>
                 </div>
             </div>
-            <Recipe></Recipe>
-            Recipes caming soon....
+            <div className="">
+                <h1 className='text-4xl font-medium text-center mt-16'>Recipes: {recipes.length}</h1>
+                {
+                    recipes.map(recipe=><Recipe recipe = {recipe} key = {recipe.id}></Recipe>)
+                }
+            </div>
         </div>
     );
 };

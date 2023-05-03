@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Authprovider';
 
 const Hader = () => {
+    const {user, logOut}= useContext(AuthContext);
     return (
         <div className="navbar bg-base-100 shadow-md my-4">
             <div className="navbar-start">
@@ -27,7 +29,12 @@ const Hader = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to={'/login'} className="btn">Login</Link>
+                {
+                    user? 
+                    <span className='flex gap-6 justify-center content-center'> <img src={user.photoURL} /> <Link onClick={logOut} className="btn">LogOut</Link> </span>
+                    :<Link to={'/login'} className="btn">Login</Link>
+                }
+                
             </div>
         </div>
     );
