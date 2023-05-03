@@ -31,7 +31,12 @@ const Hader = () => {
             <div className="navbar-end">
                 {
                     user? 
-                    <span className='flex gap-6 justify-center content-center'> <img className='w-12 rounded-full'title={user.displayName? user.displayName : ''} src={user.photoURL} /> <Link onClick={logOut} className="btn">LogOut</Link> </span>
+                    <span className='flex gap-6 justify-center content-center'>
+                        {
+                            user.photoURL &&
+                            <img className='w-12 rounded-full'title={user.displayName? user.displayName : ''} src={user.photoURL} />
+                        }  
+                    <Link onClick={logOut} className="btn">LogOut</Link> </span>
                     :<Link to={'/login'} className="btn">Login</Link>
                 }
                 

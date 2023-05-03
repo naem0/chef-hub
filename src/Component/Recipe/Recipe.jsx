@@ -3,8 +3,8 @@ import { toast } from 'react-toastify';
 import { FaHeart } from 'react-icons/fa';
 
 
-const Recipe = ({recipe}) => {
-    const {name, ingredients, cooking_method, rating}=recipe;
+const Recipe = ({ recipe }) => {
+    const { name, ingredients, cooking_method, rating, photo} = recipe;
     const [favorite, setFavorite] = useState(false);
     if (favorite) {
         toast("Wow so easy!");
@@ -12,7 +12,7 @@ const Recipe = ({recipe}) => {
     return (
         <div className="w-11/12 mx-auto">
             <div className="card card-side bg-base-100 shadow-md mt-10 grid grid-cols-4 gap-12">
-                <figure><img src="" alt="Movie" /></figure>
+                <figure><img src={photo} alt="Movie" /></figure>
                 <div className="card-body col-span-3">
                     <h2 className="card-title mb-4 text-3xl font-b">{name}</h2>
                     <div className="grid grid-cols-3 gap-8">
@@ -24,17 +24,19 @@ const Recipe = ({recipe}) => {
                             <h5 className='text-lg font-semibold mb-2'>Ingredients:</h5>
                             <ul>
                                 {
-                                    ingredients.map(ingredient=> <li className='list-disc text-gray-400'> {ingredient}</li>)
+                                    ingredients.map(ingredient => <li className='list-disc text-gray-400'> {ingredient}</li>)
                                 }
                             </ul>
                         </div>
                     </div>
                     <div className="card-actions w-full border-t-2 flex justify-around items-center">
-                        <div className=" mt-4">
+                        <div className=" mt-4 text-center flex gap-6">
+                        <p className='text-gray-400'>Rating</p>
                             <h6 className='font-semibold'>{rating}</h6>
                         </div>
-                        <div className=" mt-6">
-                            <h6 onClick={()=>setFavorite(!favorite)} className={ `font-semibold text-2xl ${favorite ? 'text-red-500': ''}`}><FaHeart /></h6>
+                        <div className=" mt-6 text-center flex gap-6">
+                            <p className='text-gray-400'>Favorite</p>
+                             <FaHeart onClick={() => setFavorite(!favorite)} className={`font-semibold text-2xl ${favorite ? 'text-red-500' : ''}`} />
                         </div>
                     </div>
                 </div>
