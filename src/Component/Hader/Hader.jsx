@@ -27,7 +27,7 @@ const Hader = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link className="btn">Get started</Link>
+                <Link to={'/login'} className="btn">Login</Link>
             </div>
         </div>
     );
