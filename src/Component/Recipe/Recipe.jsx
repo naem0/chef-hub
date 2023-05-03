@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import { FaHeart } from 'react-icons/fa';
+
 
 const Recipe = ({recipe}) => {
     const {name, ingredients, cooking_method, rating}=recipe;
     const [favorite, setFavorite] = useState(false);
     if (favorite) {
-        alert('favorit aca')
+        toast("Wow so easy!");
     }
     return (
         <div className="w-11/12 mx-auto">
@@ -26,14 +29,12 @@ const Recipe = ({recipe}) => {
                             </ul>
                         </div>
                     </div>
-                    <div className="card-actions w-full border-t-2 flex justify-around">
+                    <div className="card-actions w-full border-t-2 flex justify-around items-center">
                         <div className=" mt-4">
-                            <p className='text-gray-400'>Rating:</p>
                             <h6 className='font-semibold'>{rating}</h6>
                         </div>
-                        <div className=" mt-4">
-                            <p className='text-gray-400'>Likes</p>
-                            <h6 onClick={()=>setFavorite(!favorite)} className={ `font-semibold ${favorite ? 'text-gray-400': ''}`}>favorite</h6>
+                        <div className=" mt-6">
+                            <h6 onClick={()=>setFavorite(!favorite)} className={ `font-semibold text-2xl ${favorite ? 'text-red-500': ''}`}><FaHeart /></h6>
                         </div>
                     </div>
                 </div>
