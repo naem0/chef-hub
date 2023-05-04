@@ -37,6 +37,7 @@ const Login = () => {
         .catch((error) => {
             const errorMessage = error.message;
             console.log(errorMessage)
+            setError(errorMessage)
         });
     }
     const hendalgoogleLogin =()=>{
@@ -47,6 +48,7 @@ const Login = () => {
         })
         .catch((error) => {
             const errorMessage = error.message;
+            setError(errorMessage)
         });
     }
     return (

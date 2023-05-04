@@ -40,7 +40,8 @@ const Register = () => {
             })
             .catch(error => {
                 console.log(error);
-                setError(error.message)
+                setError(error.message);
+                
             });
     }
     const hendalGithabLogin = () => {
