@@ -23,25 +23,11 @@ const AuthProvider = ({ children }) => {
     }
     const googleProvider = new GoogleAuthProvider();
     const googleSignIn = () => {
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                const user = result.user;
-            })
-            .catch((error) => {
-                const errorMessage = error.message;
-            });
+        return signInWithPopup(auth, googleProvider);
     }
     const githabProvider = new GithubAuthProvider();
     const githabsignIn = () => {
-        signInWithPopup(auth, githabProvider)
-            .then((result) => {
-                const user = result.user;
-                console.log(user)
-            })
-            .catch((error) => {
-                const errorMessage = error.message;
-                console.log(errorMessage)
-            });
+        return signInWithPopup(auth, githabProvider);
     }
 
     const logOut = () => {

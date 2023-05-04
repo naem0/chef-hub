@@ -1,24 +1,53 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Authprovider';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
-    const {signIn}= useContext(AuthContext);
+    const { signIn, googleSignIn, githabsignIn } = useContext(AuthContext);
     const [error, setError] = useState('');
-    
-    const hendalLoging= event =>{
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
+    console.log(location)
+
+    const hendalLoging = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value
         const password = form.password.value
-        signIn(email,password)
-        .then(result => {
-            const createdUser = result.user;
-            console.log(createdUser);
+        signIn(email, password)
+            .then(result => {
+                const createdUser = result.user;
+                navigate(from)
+            })
+            .catch(error => {
+                console.log(error);
+                setError(error.message)
+            })
+    }
+    const hendalGithabLogin =()=>{
+        githabsignIn()
+        .then((result) => {
+            const user = result.user;
+            console.log(user)
+            navigate(from)
         })
-        .catch(error => {
-            console.log(error);
-            setError(error.message)
+        .catch((error) => {
+            const errorMessage = error.message;
+            console.log(errorMessage)
+        });
+    }
+    const hendalgoogleLogin =()=>{
+        googleSignIn()
+        .then((result) => {
+            const user = result.user;
+            navigate(from)
         })
+        .catch((error) => {
+            const errorMessage = error.message;
+        });
     }
     return (
         <div>
@@ -33,15 +62,15 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" placeholder="email" name='email' className="input input-bordered" />
+                                <input type="email" placeholder="email" name='email' className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" name='password' placeholder="password" className="input input-bordered" />
+                                <input type="password" name='password' placeholder="password" className="input input-bordered" />
                                 <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                    <Link to={'/register'} className="label-text-alt link link-hover">New to tha Chef Hantar? Go to Register. </Link>
                                 </label>
                             </div>
                             <p><small className='text-red-400'>{error}</small></p>
@@ -49,6 +78,12 @@ const Login = () => {
                                 <button className="btn">Login</button>
                             </div>
                         </form>
+                        <hr className='border-t-2' />
+                        <p className='text-center -m-4 font-semibold'>or</p>
+                        <div className="p-8 flex justify-between">
+                            <button className='btn w-5/12' onClick={hendalgoogleLogin}><FaGoogle className='me-3' /> google</button>
+                            <button className='btn w-5/12' onClick={hendalGithabLogin}><FaGithub className='me-3'></FaGithub> githab</button>
+                        </div>
                     </div>
                 </div>
             </div>

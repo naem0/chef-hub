@@ -11,26 +11,34 @@ import Login from './Component/Login/Login';
 import Recipes from './Component/Recipes/Recipes';
 import AuthProvider from './Authprovider';
 import Blog from './Component/Blog/Blog';
+import Register from './Component/Register/Register';
+import PraivatRoute from './PrivateRoute/PraivatRoute';
+import ErrorPage from './Component/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch(`http://localhost:5000/chef`),
+        loader: () => fetch(`https://chef-recipe-hunting-server-naem0.vercel.app/chef`),
       },
       {
-        path: ":id",
-        element: <Recipes></Recipes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/chef/${params.id}`),
+        path: "/:id",
+        element: <PraivatRoute><Recipes></Recipes></PraivatRoute>,
+        loader: ({ params }) => fetch(`https://chef-recipe-hunting-server-naem0.vercel.app/chef/${params.id}`),
       },
       {
         path: "/login",
         element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       },
       {
         path: "/blog",

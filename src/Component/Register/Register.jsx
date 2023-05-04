@@ -1,12 +1,18 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Authprovider';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Register = () => {
-    const {createUser, updatUser, googleSignIn, githabsignIn}= useContext(AuthContext);
+    const { createUser, updatUser, googleSignIn, githabsignIn } = useContext(AuthContext);
     const [error, setError] = useState('');
-    
-    const hendalRegister= event =>{
+    const navigate = useNavigate()
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/'
+
+    const hendalRegister = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value
@@ -18,24 +24,47 @@ const Register = () => {
             setError('password atlist  6 cractir');
             return
         }
-        createUser(email,password)
-        .then(result => {
-            const createdUser = result.user;
-            console.log(createdUser);
-        })
-        .catch(error => {
-            console.log(error);
-            setError(error.message)
-        });
+        createUser(email, password)
+            .then(result => {
+                const createdUser = result.user;
+                console.log(createdUser);
+            })
+            .catch(error => {
+                console.log(error);
+                setError(error.message)
+            });
         updatUser(name, photo)
-        .then(result => {
-            const updateProfile = result.user;
-            console.log(updateProfile);
-        })
-        .catch(error => {
-            console.log(error);
-            setError(error.message)
-        });
+            .then(result => {
+                const updateProfile = result.user;
+                console.log(updateProfile);
+            })
+            .catch(error => {
+                console.log(error);
+                setError(error.message)
+            });
+    }
+    const hendalGithabLogin = () => {
+        githabsignIn()
+            .then((result) => {
+                const user = result.user;
+                console.log(user)
+                navigate(from)
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setError(errorMessage)
+            });
+    }
+    const hendalgoogleLogin = () => {
+        googleSignIn()
+            .then((result) => {
+                const user = result.user;
+                navigate(from)
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setError(errorMessage)
+            });
     }
     return (
         <div className="hero min-h-screen ">
@@ -61,15 +90,15 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="text" name='email' placeholder="email" className="input input-bordered" />
+                            <input type="email" name='email' required placeholder="email" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered" />
+                            <input type="password" name='password' required placeholder="password" className="input input-bordered" />
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <Link to={'/login'} className="label-text-alt link link-hover">already have an account? Go to login. </Link>
                             </label>
                         </div>
                         <p><small className='text-red-400'>{error}</small></p>
@@ -77,8 +106,13 @@ const Register = () => {
                             <button className="btn">Register</button>
                         </div>
                     </form>
-                    <button onClick={googleSignIn}>google</button>
-                    <button onClick={githabsignIn}>githab</button>
+                    <hr className='border-t-2' />
+                    <p className='text-center -m-4 font-semibold'>or</p>
+                    <div className="p-8 flex justify-between">
+                        <button className='btn w-5/12' onClick={hendalgoogleLogin}><FaGoogle className='me-3' /> google</button>
+                        <button className='btn w-5/12' onClick={hendalGithabLogin}><FaGithub className='me-3'></FaGithub> githab</button>
+                    </div>
+
                 </div>
             </div>
         </div>
