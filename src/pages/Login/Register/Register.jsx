@@ -5,7 +5,7 @@ import { AuthContext } from '../../../Authprovider';
 
 
 const Register = () => {
-    const { createUser, updatUser, googleSignIn, githabsignIn, user, loading } = useContext(AuthContext);
+    const { createUser, updatUser, googleSignIn, githabsignIn, loading } = useContext(AuthContext);
     const [error, setError] = useState('');
     const navigate = useNavigate()
     const location = useLocation();
@@ -43,11 +43,11 @@ const Register = () => {
         githabsignIn()
             .then((result) => {
                 const user = result.user;
-                console.log(user)
                 navigate(from)
             })
             .catch((error) => {
                 const errorMessage = error.message;
+                setError(errorMessage)
             });
     }
     const hendalgoogleLogin = () => {
