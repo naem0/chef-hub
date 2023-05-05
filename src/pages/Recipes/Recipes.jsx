@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
 import Recipe from './Recipe/Recipe';
 
 
 const Recipes = () => {
+    const navigation = useNavigation();
+    console.log(navigation.state)
+    if (navigation.state == 'loading') {
+        return <progress className="progress w-56 mx-auto"></progress>
+    }
     const chefData = useLoaderData();
     const { name, bio, id, photo, likes, experience, recipes } = chefData;
 

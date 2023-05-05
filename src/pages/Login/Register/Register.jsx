@@ -12,7 +12,7 @@ const Register = () => {
 
     const from = location.state?.from?.pathname || '/'
     if (loading) {
-        <progress className="progress w-56"></progress>
+        return <progress className="progress w-56"></progress>
     }
     const hendalRegister = event => {
         event.preventDefault();
@@ -30,7 +30,7 @@ const Register = () => {
             .then(async (result) => {
                 const createdUser = result.user;
                 console.log(createdUser);
-                
+
                 await updatUser(name, photo);
                 navigate(from);  
             })
